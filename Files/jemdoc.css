@@ -21,6 +21,10 @@
 	box-sizing: border-box;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: var(--font-family);
 	line-height: 1.6;
@@ -417,5 +421,71 @@ img {
 
 	.news-list .date {
 		margin-bottom: 5px;
+	}
+}
+
+/* Publications Section */
+.publication-list {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+.publication-item {
+	display: flex;
+	gap: 30px;
+	align-items: center;
+	background: #fff;
+	padding: 30px;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.pub-content {
+	flex: 1;
+}
+
+.pub-content h3 {
+	font-size: 1.4rem;
+	margin-bottom: 10px;
+	color: var(--primary-color);
+}
+
+.pub-content .authors {
+	font-size: 1.1rem;
+	margin-bottom: 5px;
+	color: var(--text-color);
+}
+
+.pub-content .venue {
+	font-style: italic;
+	color: var(--light-text);
+	margin-bottom: 5px;
+}
+
+.pub-content .citation {
+	font-weight: 600;
+	color: var(--secondary-color);
+}
+
+.pub-image {
+	flex: 0 0 400px;
+}
+
+.pub-image img {
+	width: 100%;
+	border-radius: 4px;
+	border: 1px solid var(--border-color);
+}
+
+@media (max-width: 900px) {
+	.publication-item {
+		flex-direction: column-reverse;
+		align-items: flex-start;
+	}
+
+	.pub-image {
+		flex: 0 0 auto;
+		width: 100%;
 	}
 }
